@@ -14,7 +14,7 @@
             <h1 class="text-2xl font-bold">The Tech Blog</h1>
             <div class="space-x-6">
                 <a href="/" class="hover:underline">Home</a>
-                <a href="#" class="hover:underline">Dashboard</a>
+                <a href="/dashboard" class="hover:underline">Dashboard</a>
                 {{#if currentUser}}
                     <a hx-post="/logout" hx-target="body" class="hover:underline">Logout</a>
                 {{else}}
