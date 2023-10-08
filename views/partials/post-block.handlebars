@@ -1,0 +1,7 @@
+<div class="post-block">
+  <h4><a href="/post/{{post.id}}">{{post.title}}</a></h4>
+  <p>Posted by {{post.User.username}} on {{formatDate post.createdAt}}</p>
+  <div class="content-preview">
+    {{truncateString post.content 200}}
+  </div>
+</div>
