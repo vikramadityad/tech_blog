@@ -1,25 +1,22 @@
-/* Reset some default styles */
 body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
   }
   
-  /* Set a background color and text color for the entire page */
   body {
     background-color: #f0f0f0;
     font-family: Arial, sans-serif;
     color: #333;
   }
   
-  /* Style the header */
+ 
   header {
-    background-color: #007BFF;
+    background-color: #240806;
     color: #fff;
     padding: 10px;
     text-align: center;
   }
   
-  /* Style the navigation menu */
   nav {
     background-color: #333;
     color: #fff;
@@ -32,7 +29,6 @@ body, h1, h2, h3, p, ul, li {
     margin-right: 20px;
   }
   
-  /* Style the main content container */
   .container {
     max-width: 800px;
     margin: 0 auto;
@@ -41,7 +37,6 @@ body, h1, h2, h3, p, ul, li {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
-  /* Style buttons */
   .btn {
     display: inline-block;
     padding: 10px 20px;
@@ -55,7 +50,6 @@ body, h1, h2, h3, p, ul, li {
     background-color: #0056b3;
   }
   
-  /* Style forms */
   form {
     margin-top: 20px;
   }
@@ -76,13 +70,11 @@ body, h1, h2, h3, p, ul, li {
     border-radius: 4px;
   }
   
-  /* Style error messages */
   .error {
     color: #ff0000;
     margin-top: 5px;
   }
   
-  /* Style post and comment blocks */
   .post-block,
   .comment-block {
     background-color: #fff;
@@ -92,7 +84,6 @@ body, h1, h2, h3, p, ul, li {
     border-radius: 4px;
   }
   
-  /* Responsive design for smaller screens */
   @media screen and (max-width: 600px) {
     .container {
       padding: 10px;

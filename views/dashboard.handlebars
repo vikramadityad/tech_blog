@@ -1,20 +1,25 @@
-<section class="dashboard">
-  <h2>Welcome to Your Dashboard, {{user.username}}!</h2>
+<section class="dashboard bg-gray-100 min-h-screen py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <h2 class="text-3xl font-bold text-gray-900 mb-8">Welcome to Your Dashboard, {{user.username}}!</h2>
 
-  {{#if user.posts.length}}
-  <h3>Your Blog Posts</h3>
-  <ul class="post-list">
-    {{#each user.posts}}
-    <li>
-      <h4><a href="/post/{{id}}">{{title}}</a></h4>
-      <p>{{createdAt}}</p>
-      <p>{{content}}</p>
-      <a href="/post/edit/{{id}}">Edit</a> | <a href="/post/delete/{{id}}">Delete</a>
-    </li>
-    {{/each}}
-    <p></p><a href="/posts/new">Write a post</a>.</p>
-  </ul>
-  {{else}}
-  <p>You haven't created any blog posts yet. <a href="/new-post">Create one now</a>.</p>
-  {{/if}}
+    {{#if user.posts.length}}
+    <h3 class="text-xl font-semibold mb-4">Your Blog Posts</h3>
+    <ul class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {{#each user.posts}}
+      <li class="bg-white p-4 rounded shadow">
+        <h4 class="text-lg font-semibold mb-2"><a href="/posts/{{id}}" class="text-blue-500 hover:underline">{{title}}</a></h4>
+        <p class="text-gray-500 text-sm">{{createdAt}}</p>
+        <p class="text-gray-700 mt-2">{{content}}</p>
+        <div class="mt-4">
+          <a href="/posts/{{id}}/edit" class="text-blue-500 hover:underline">Edit</a> |
+          <a href="api/posts/delete/{{id}}" class="text-red-500 hover:underline">Delete</a>
+        </div>
+      </li>
+      {{/each}}
+    </ul>
+    <p class="mt-8 text-center text-blue-500"><a href="/posts/new">Write a post</a></p>
+    {{else}}
+    <p class="text-xl font-semibold text-gray-900">You haven't created any blog posts yet. <a href="/new-post" class="text-blue-500 hover:underline">Create one now</a>.</p>
+    {{/if}}
+  </div>
 </section>

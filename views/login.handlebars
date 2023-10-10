@@ -1,22 +1,25 @@
-<section class="login">
-    <h2>Login to Your Blog</h2>
+<section class="login min-h-screen flex items-center justify-center bg-gray-100">
+  <div class="max-w-md w-full space-y-8 p-4 bg-white rounded shadow-lg">
+    <h2 class="text-2xl font-bold text-center">Login to Your Blog</h2>
 
     {{#if errorMessage}}
-      <p class="error">{{errorMessage}}</p>
+      <p class="text-red-600 text-center">{{errorMessage}}</p>
     {{/if}}
 
-    <form action="/login" method="POST">
-      <div class="form-group">
-        <label for="username">Username</label>
-        <input type="text" id="username" name="username" required>
+    <form action="/login" method="POST" class="mt-8 space-y-6">
+      <div class="mb-4">
+        <label for="username" class="block text-sm font-medium text-gray-700">Username</label>
+        <input type="text" id="username" name="username" required class="w-full px-3 py-2 border rounded-md">
       </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" name="password" required>
+      <div class="mb-6">
+        <label for="password" class="block text-sm font-medium text-gray-700">Password</label>
+        <input type="password" id="password" name="password" required class="w-full px-3 py-2 border rounded-md">
       </div>
-      <button type="submit">Login</button>
+      <div class="text-center">
+        <button type="submit" class="px-4 py-2 font-semibold text-white bg-blue-500 rounded hover:bg-blue-600 focus:outline-none focus:ring focus:ring-blue-200">Login</button>
+      </div>
     </form>
 
-    <p>Don't have an account? <a href="/signup">Sign up here</a>.</p>
-  </section>
-
+    <p class="mt-4 text-center text-gray-700">Don't have an account? <a href="/signup" class="text-blue-500 hover:underline">Sign up here</a>.</p>
+  </div>
+</section>

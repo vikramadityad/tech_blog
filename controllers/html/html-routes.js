@@ -172,6 +172,27 @@ router.post('/posts', isAuthenticated, async (req, res) => {
   res.redirect('/dashboard');
 })
 
+// edit post route 
+
+router.get('/posts/:id/edit',  isAuthenticated, async (req, res) => {
+  console.log("test");
+  const post = await Post.findOne({
+    where: {id:req.params.id,user_id:req.session.user_id} 
+  })
+
+  if (!post) {
+    res.status(404).json({ message: 'Post not found' });
+    return;
+  }
+  res.render('posts/edit', {
+      post,
+      user: req.session.username,
+      loggedIn: req.session.loggedIn, 
+  });
+
+
+});
+
 
 
 // Individual post route
@@ -202,6 +223,8 @@ router.get('/posts/:id', async (req, res) => {
       return;
     }
 
+    // show blog
+
     const post = postData.get({ plain: true });
 
     res.render('posts/show', {
@@ -214,6 +237,8 @@ router.get('/posts/:id', async (req, res) => {
     res.status(500).json(err);
   }
 });
+
+// comments post route 
 
 router.post('/posts/:id/comments', async (req,res) => {
   const post = await Post.findByPk(req.params.id);
@@ -228,4 +253,16 @@ router.post('/posts/:id/comments', async (req,res) => {
   });
   res.redirect(`/posts/${post.id}`);
 })
+
+
+// delete post route 
+
+
+
+
 module.exports = router;
+
+
+
+
+
