@@ -36,6 +36,11 @@ DB_PORT=3306
 5. Start the application using: npm start
 
 ## Screenshots
+<img width="1876" alt="Screenshot 2023-10-13 at 1 25 18 AM" src="https://github.com/vikramadityad/tech_blog/assets/28673859/b60d9ec7-791c-44cb-be21-b8cd2b141a35">
+<img width="1872" alt="Screenshot 2023-10-13 at 1 24 11 AM" src="https://github.com/vikramadityad/tech_blog/assets/28673859/bb4ba834-114c-4a17-962a-d5f2b69da580">
+<img width="1894" alt="Screenshot 2023-10-13 at 1 24 41 AM" src="https://github.com/vikramadityad/tech_blog/assets/28673859/5d8c224a-73c7-48d8-992e-3fb090ff8431">
+<img width="1895" alt="Screenshot 2023-10-13 at 1 24 24 AM" src="https://github.com/vikramadityad/tech_blog/assets/28673859/f2f47e22-24ed-4f75-9f91-ecd8a755306a">
+<img width="1888" alt="Screenshot 2023-10-13 at 1 25 03 AM" src="https://github.com/vikramadityad/tech_blog/assets/28673859/d6b2fc30-a8ba-4127-923b-4eb968538b1a">
 
 
 ## Usage
