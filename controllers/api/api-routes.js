@@ -73,7 +73,7 @@ router.delete('/posts/:id', isAuthenticated, async (req, res) => {
       return;
     }
 
-    res.status(200).json({ message: 'Post deleted successfully' });
+    res.status(200).send('Post deleted successfully');
   } catch (err) {
     console.error(err);
     res.status(500).json(err);

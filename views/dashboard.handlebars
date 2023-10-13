@@ -6,13 +6,13 @@
     <h3 class="text-xl font-semibold mb-4">Your Blog Posts</h3>
     <ul class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {{#each user.posts}}
-      <li class="bg-white p-4 rounded shadow">
+      <li class="bg-white p-4 rounded shadow post">
         <h4 class="text-lg font-semibold mb-2"><a href="/posts/{{id}}" class="text-blue-500 hover:underline">{{title}}</a></h4>
         <p class="text-gray-500 text-sm">{{createdAt}}</p>
         <p class="text-gray-700 mt-2">{{content}}</p>
         <div class="mt-4">
           <a href="/posts/{{id}}/edit" class="text-blue-500 hover:underline">Edit</a> |
-          <a href="api/posts/delete/{{id}}" class="text-red-500 hover:underline">Delete</a>
+          <a hx-delete="api/posts/{{id}}" hx-target="closest .post" hx-swap="delete" class="text-red-500 hover:underline">Delete</a>
         </div>
       </li>
       {{/each}}
