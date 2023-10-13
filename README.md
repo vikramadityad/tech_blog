@@ -43,6 +43,10 @@ DB_PORT=3306
 <img width="1888" alt="Screenshot 2023-10-13 at 1 25 03 AM" src="https://github.com/vikramadityad/tech_blog/assets/28673859/d6b2fc30-a8ba-4127-923b-4eb968538b1a">
 
 
+Live application URL:
+
+https://techblogunb-377939a5a2b7.herokuapp.com/
+
 ## Usage
 
 When you visit the site for the first time, you'll be presented with the homepage, which may include existing blog posts.
